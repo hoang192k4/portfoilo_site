@@ -1,0 +1,38 @@
+@import 'normalize.css';
+
+:root {
+    --text-color: #333;
+}
+
+html {
+    // tương đương 1rem = 10px;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-size: 1.6rem;
+    //tối ưu render text
+    text-rendering: optimizeSpeed;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        // tương đương 1 rem = 8px
+        font-size: 50%;
+    }
+}
