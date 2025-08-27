@@ -1,7 +1,9 @@
 @import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
     --text-color: #333;
+    --background-color: #888;
 }
 
 html {
@@ -14,12 +16,42 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Scrollbar mảnh */
+::-webkit-scrollbar {
+    width: 10px; /* mảnh hơn (chiều rộng dọc) */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+    /* border làm thumb trông nhỏ hơn nữa */
+    border: 1px solid #f1f1f1;
+}
+
+/* Hover thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    cursor: pointer;
+}
 
 body {
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
     font-size: 1.6rem;
     //tối ưu render text
     text-rendering: optimizeSpeed;
+    background-color: var(--background-color);
 }
 
 a {
@@ -28,6 +60,20 @@ a {
 
 ul {
     list-style: none;
+}
+
+:global(.no-scroll) {
+    overflow: hidden;
+}
+
+:global(.dark) {
+    --background-color: #121212;
+    --text-color: #eaeaea;
+}
+
+:global(.light) {
+    --background-color: #ffffff;
+    --text-color: #212529;
 }
 
 @media screen and (max-width: 768px) {

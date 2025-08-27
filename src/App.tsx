@@ -1,7 +1,11 @@
+import Header from '@/components/layouts/Header/Header';
+import Footer from './components/layouts/Footer/Footer';
 function App() {
     return (
         <>
-            <h1>Create Project Portfolio</h1>
+            <Header />
+            <main style={{ minHeight: '600px' }}></main>
+            <Footer />
         </>
     );
 }

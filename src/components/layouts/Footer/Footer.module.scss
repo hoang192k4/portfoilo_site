@@ -1,0 +1,50 @@
+@use '@styles/mixins' as *;
+.wapper {
+    @include containerGlobal;
+    color: var(--text-color);
+    border-top: 1px solid var(--text-color);
+    padding-top: 1.5rem;
+}
+
+.profile {
+    @include flexBetween;
+
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.profile-item {
+    width: calc(100% / 3);
+}
+
+.subtitle {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+        margin-right: 0.4rem;
+    }
+
+    span {
+        margin-left: 0.4rem;
+        font-weight: bold;
+        color: rgb(63, 63, 175);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wapper {
+        margin: 0 1rem;
+    }
+
+    .profile-item {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+}
