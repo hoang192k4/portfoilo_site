@@ -62,16 +62,16 @@ ul {
     list-style: none;
 }
 
-:global(.no-scroll) {
+.no-scroll {
     overflow: hidden;
 }
 
-:global(.dark) {
+.dark {
     --background-color: #121212;
     --text-color: #eaeaea;
 }
 
-:global(.light) {
+.light {
     --background-color: #ffffff;
     --text-color: #212529;
 }
