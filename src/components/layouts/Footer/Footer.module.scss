@@ -1,9 +1,8 @@
 @use '@styles/mixins' as *;
 .wapper {
-    @include containerGlobal;
     color: var(--text-color);
     border-top: 1px solid var(--text-color);
-    padding-top: 1.5rem;
+    padding: 2rem 0;
 }
 
 .profile {
@@ -34,17 +33,19 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .wapper {
         margin: 0 1rem;
     }
+}
 
+@media screen and (max-width: 768px) {
     .profile-item {
         width: 100%;
         margin-top: 1rem;
     }
 
     .subtitle {
-        text-align: center;
+        justify-content: center;
     }
 }

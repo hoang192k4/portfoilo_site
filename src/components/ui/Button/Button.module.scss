@@ -1,0 +1,52 @@
+.wapper {
+    /* padding: 1rem 6rem; */
+    width: 23rem;
+    height: 4.5rem;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    ~ .wapper {
+        margin-left: 1.8rem;
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        svg {
+            font-size: 2rem;
+        }
+    }
+}
+
+.primary {
+    background-color: var(--bg-primary-button);
+    color: #ffffff;
+
+    &:hover {
+        background-color: var(--bg-hover-primary);
+    }
+}
+
+.outline {
+    background-color: transparent;
+    color: var(--color-outline-button);
+    border-color: var(--bg-primary-button);
+
+    &:hover {
+        background-color: var(--bg-primary-button);
+        color: #ffffff;
+    }
+}
+
+.icon-left {
+    margin-right: 0.8rem;
+}
+
+.icon-right {
+    margin-left: 0.8rem;
+}

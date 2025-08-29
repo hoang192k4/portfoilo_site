@@ -1,11 +1,18 @@
-import Header from '@/components/layouts/Header/Header';
-import Footer from './components/layouts/Footer/Footer';
+import Header from '@/components/layouts/Header';
+import Footer from '@/components/layouts/Footer';
+import Home from '@/pages/Home';
+import Container from './components/layouts/Container';
+
 function App() {
     return (
         <>
             <Header />
-            <main style={{ minHeight: '600px' }}></main>
-            <Footer />
+            <Container>
+                <main style={{ minHeight: '1600px' }}>
+                    <Home />
+                </main>
+                <Footer />
+            </Container>
         </>
     );
 }

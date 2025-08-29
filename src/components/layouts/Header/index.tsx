@@ -63,7 +63,7 @@ const Header = () => {
                 </>
             )}
 
-            <nav className={cx(['container', 'navbar'])}>
+            <nav className={cx('navbar')}>
                 <MediaQuery maxWidth={768}>
                     <span className={cx('navbar-icon')} onClick={hanleToggle}>
                         <FaBars size={18} />
@@ -76,8 +76,10 @@ const Header = () => {
                     </ul>
                 </MediaQuery>
 
-                <div className={cx('navbar-right')} onClick={handleToggleTheme}>
-                    {theme === 'light' ? <CiLight size={24} /> : <CiDark size={24} />}
+                <div>
+                    <div className={cx('navbar-right')} onClick={handleToggleTheme}>
+                        {theme === 'light' ? <CiLight size={24} /> : <CiDark size={24} />}
+                    </div>
                 </div>
             </nav>
         </header>
