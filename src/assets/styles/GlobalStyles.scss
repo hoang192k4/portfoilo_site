@@ -1,9 +1,12 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 :root {
     --text-color: #333;
     --background-color: #888;
+    --bg-primary-button: #2563eb;
+    --bg-hover-primary: #3b82f6;
+    --color-outline-button: #2563eb;
+    --hover-outline-button: #eff6ff;
 }
 
 html {
@@ -16,6 +19,7 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+
 ::-webkit-scrollbar-button {
     display: none;
 }
@@ -69,11 +73,30 @@ ul {
 .dark {
     --background-color: #121212;
     --text-color: #eaeaea;
+    --bg-primary-button: #3b82f6;
+    --bg-hover-primary: #60a5fa;
+    --color-outline-button: #3b82f6;
+    --hover-outline-button: rgba(59, 130, 246, 0.1);
 }
 
 .light {
     --background-color: #ffffff;
     --text-color: #212529;
+    --bg-primary-button: #2563eb;
+    --bg-hover-primary: #3b82f6;
+    --color-outline-button: #2563eb;
+    --hover-outline-button: #eff6ff;
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.active-nav {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {

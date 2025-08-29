@@ -1,9 +1,5 @@
 @use '@styles/mixins' as *;
 
-.container {
-    @include containerGlobal;
-}
-
 .navbar-overlay {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -95,15 +91,17 @@
     @include flexBetween;
 
     li {
-        padding: 1rem 1.2rem;
-        cursor: pointer;
-        transition: all 0.3s linear;
-
-        &:hover {
-            background-color: var(--text-color);
-            border-radius: 10px;
-            color: var(--background-color);
+        a {
+            padding: 1rem 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s linear;
+            &:hover {
+                background-color: var(--text-color);
+                border-radius: 10px;
+                color: var(--background-color);
+            }
         }
+
         ~ li {
             margin-left: 0.8rem;
         }

@@ -1,10 +1,23 @@
-@mixin containerGlobal {
-    max-width: 1220px;
-    margin: 0 auto;
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+@mixin flexBetween {
+    @include flex;
+    justify-content: space-between;
 }
 
-@mixin flexBetween {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@mixin flexCenter {
+    @include flex;
+    justify-content: center;
+}
+
+@mixin flexEnd {
+    @include flex;
+    justify-content: flex-end;
+}
+
+@mixin flexStart {
+    @include flex;
+    justify-content: flex-start;
 }

@@ -1,0 +1,32 @@
+.wapper {
+    padding-top: 20rem;
+    color: var(--text-color);
+}
+
+.content {
+    h1 {
+        font-size: 4rem;
+        margin: 2rem 0;
+    }
+    p {
+        font-size: 2.2rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+}
+.cta {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .wapper {
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .cta {
+        justify-content: space-between;
+    }
+}
