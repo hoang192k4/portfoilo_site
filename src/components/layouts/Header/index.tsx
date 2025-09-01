@@ -12,6 +12,7 @@ const cx = classNames.bind(styles);
 const Header = () => {
     const [activeMenuMobile, setActiveMenuMobile] = useState<boolean>(false);
     const [closeMenuMobile, setCloseMenuMobile] = useState<boolean>(false);
+    const [active, setActive] = useState<string>('hero');
     const [theme, setTheme] = useState<'light' | 'dark'>(
         () => (localStorage.getItem('theme') as 'light' | 'dark') ?? 'light',
     );
@@ -58,7 +59,7 @@ const Header = () => {
                             closeMenuMobile ? 'menu-mobile-close' : '',
                         ])}
                     >
-                        <MenuItem />
+                        <MenuItem active={active} setActive={setActive} />
                     </ul>
                 </>
             )}
@@ -72,7 +73,7 @@ const Header = () => {
 
                 <MediaQuery minWidth={768}>
                     <ul className={cx('navbar-left')}>
-                        <MenuItem />
+                        <MenuItem active={active} setActive={setActive} />
                     </ul>
                 </MediaQuery>
 

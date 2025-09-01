@@ -24,16 +24,22 @@
     z-index: 11;
     position: fixed;
     height: 100%;
+    padding-top: 1rem;
     color: var(--text-color);
     animation: transfrom 0.3s forwards;
 
     li {
-        padding: 2rem;
-        transition: all 0.3s linear;
-        &:hover {
+        a {
+            display: block;
+            width: 100%;
+            padding: 1.5rem;
+            border-radius: 0;
             cursor: pointer;
-            background-color: var(--text-color);
-            color: var(--background-color);
+            transition: all 0.3s linear;
+            &:hover {
+                background-color: var(--text-color);
+                color: var(--background-color);
+            }
         }
     }
 }

@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 
-const MenuItem = () => {
-    const [active, setActive] = useState('hero');
-
+interface Props {
+    active: string;
+    setActive: React.Dispatch<React.SetStateAction<string>>;
+}
+const MenuItem = memo(({ active, setActive }: Props) => {
     const navbar = [
         {
             id: 1,
@@ -26,11 +28,8 @@ const MenuItem = () => {
             label: 'Liên Hệ',
         },
     ];
-
-    useEffect(() => {
-        setActive(navbar[0].to);
-    }, []);
-
+    console.log(active);
+    console.log('re render menu item');
     return (
         <>
             {navbar?.map((item) => (
@@ -51,6 +50,6 @@ const MenuItem = () => {
             ))}
         </>
     );
-};
+});
 
 export default MenuItem;
