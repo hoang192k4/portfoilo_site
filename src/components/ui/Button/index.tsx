@@ -14,6 +14,7 @@ interface Props {
     className?: string;
     iconRight?: React.ReactNode;
     iconLeft?: React.ReactNode;
+    blank?: boolean;
     onClick?: () => void;
 }
 const Button = (propsCurrent: Props) => {
@@ -27,6 +28,7 @@ const Button = (propsCurrent: Props) => {
         className,
         iconLeft,
         iconRight,
+        blank,
         onClick,
         ...passProps
     } = propsCurrent;
@@ -54,7 +56,7 @@ const Button = (propsCurrent: Props) => {
     );
     return (
         <>
-            <Component className={classes} {...props}>
+            <Component className={classes} {...props} target={blank ? '_blank' : '_self'}>
                 {iconLeft && <span className={cx('icon-left')}>{iconLeft}</span>}
                 {children}
                 {iconRight && <span className={cx('icon-right')}>{iconRight}</span>}

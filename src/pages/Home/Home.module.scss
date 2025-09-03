@@ -1,22 +1,46 @@
+@use '@styles/mixins' as *;
 .wapper {
-    padding-top: 20rem;
+    padding-top: 30rem;
     color: var(--text-color);
 }
 
 .content {
+    text-align: center;
     h1 {
         font-size: 4rem;
         margin: 2rem 0;
     }
     p {
-        font-size: 2.2rem;
+        font-size: var(--font-size-text);
         font-weight: 500;
         margin-bottom: 2rem;
     }
 }
 .cta {
-    display: flex;
-    align-items: center;
+    @include flexCenter;
+    margin-bottom: 1rem;
+}
+
+.description {
+    text-align: center;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.socail {
+    text-align: center;
+}
+
+.socail-icon {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    width: 4.8rem !important;
+    font-size: 2.6rem;
+    border-radius: 100% !important;
+
+    &:hover {
+        background-color: grey;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -25,6 +49,7 @@
     }
 }
 
+/* mobile */
 @media screen and (max-width: 376px) {
     .cta {
         justify-content: space-between;
