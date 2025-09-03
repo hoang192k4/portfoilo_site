@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
-import { FaCloudDownloadAlt } from 'react-icons/fa';
+import { FaCloudDownloadAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiGmail } from 'react-icons/si';
 
 import styles from './Home.module.scss';
 import Button from '@components/ui/Button';
@@ -9,7 +10,6 @@ const cx = classNames.bind(styles);
 const Home = () => {
     return (
         <section className={cx('wapper')} id="hero">
-            <h4 className={cx('hashtag')}>#Fresher Frontend Developer</h4>
             <div className={cx('content')}>
                 <h1>
                     Xin chào, Tôi là <span>Nguyễn Ngọc Hoàng</span>
@@ -32,6 +32,28 @@ const Home = () => {
                     iconLeft={<FaCloudDownloadAlt />}
                 >
                     Xem CV
+                </Button>
+            </div>
+            <small className={cx('description')}>
+                Hãy xem qua các dự án tôi đã thực hiện hoặc tải CV để biết thêm chi tiết.
+            </small>
+            <div className={cx('socail')}>
+                <Button href="https://github.com/hoang192k4" className={cx('socail-icon')} blank>
+                    <FaGithub />
+                </Button>
+                <Button
+                    href="https://www.linkedin.com/in/nguyenngochoang2004/en/"
+                    className={cx('socail-icon')}
+                    blank
+                >
+                    <FaLinkedin />
+                </Button>
+                <Button
+                    href="mailto:nguyenngochoang192k4@gamil.com"
+                    className={cx('socail-icon')}
+                    blank
+                >
+                    <SiGmail />
                 </Button>
             </div>
         </section>

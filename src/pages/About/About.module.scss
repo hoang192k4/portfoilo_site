@@ -1,4 +1,35 @@
 .wapper {
-    padding-top: 4rem;
+    padding-top: 6rem;
     color: var(--text-color);
+}
+
+.content {
+    padding: 2rem 0;
+}
+.title {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    font-size: 2.8rem;
+
+    svg {
+        margin-right: 0.5rem;
+    }
+}
+
+.content-item {
+    p {
+        font-size: var(--font-size-text);
+    }
+}
+
+.hightlight-text {
+    font-weight: bold;
+    color: var(--bg-primary-button);
+}
+
+@media screen and (max-width: 1200px) {
+    .wapper {
+        margin: 0 1rem;
+    }
 }

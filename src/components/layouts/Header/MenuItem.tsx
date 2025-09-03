@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from 'react';
+import { memo } from 'react';
 import { Link } from 'react-scroll';
 
 interface Props {
@@ -28,8 +28,7 @@ const MenuItem = memo(({ active, setActive }: Props) => {
             label: 'Liên Hệ',
         },
     ];
-    console.log(active);
-    console.log('re render menu item');
+
     return (
         <>
             {navbar?.map((item) => (
