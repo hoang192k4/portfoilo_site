@@ -3,6 +3,7 @@ import Footer from '@/components/layouts/Footer';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
 import Container from './components/layouts/Container';
+import Contact from './pages/Contact';
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                 <main style={{ minHeight: '1600px' }}>
                     <Home />
                     <About />
+                    <Contact />
                 </main>
                 <Footer />
             </Container>
