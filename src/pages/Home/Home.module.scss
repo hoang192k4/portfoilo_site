@@ -1,7 +1,10 @@
 @use '@styles/mixins' as *;
 .wapper {
-    padding-top: 30rem;
+    padding-bottom: 4rem;
     color: var(--text-color);
+    height: calc(100vh - 4rem);
+    display: flex;
+    align-items: end;
 }
 
 .content {

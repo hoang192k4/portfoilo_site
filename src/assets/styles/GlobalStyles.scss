@@ -8,6 +8,8 @@
     --color-outline-button: #2563eb;
     --hover-outline-button: #eff6ff;
     --font-size-text: 2rem;
+    --bg-gradient-frist: rgba(51, 50, 50, 0.05);
+    --bg-gradient-second: rgba(44, 42, 42, 0.05);
 }
 
 html {
@@ -57,6 +59,10 @@ body {
     //tối ưu render text
     text-rendering: optimizeSpeed;
     background-color: var(--background-color);
+    background-image: linear-gradient(var(--bg-gradient-frist) 1px, transparent 1px),
+        linear-gradient(90deg, var(--bg-gradient-second) 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-attachment: fixed;
 }
 
 a {
@@ -78,6 +84,8 @@ ul {
     --bg-hover-primary: #60a5fa;
     --color-outline-button: #3b82f6;
     --hover-outline-button: rgba(59, 130, 246, 0.1);
+    --bg-gradient-frist: rgba(255, 255, 255, 0.05);
+    --bg-gradient-second: rgba(255, 255, 255, 0.05);
 }
 
 .light {
@@ -87,6 +95,8 @@ ul {
     --bg-hover-primary: #3b82f6;
     --color-outline-button: #2563eb;
     --hover-outline-button: #eff6ff;
+    --bg-gradient-frist: rgba(51, 50, 50, 0.05);
+    --bg-gradient-second: rgba(44, 42, 42, 0.05);
 }
 
 .container {

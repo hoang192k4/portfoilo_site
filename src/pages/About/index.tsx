@@ -1,51 +1,89 @@
 import classNames from 'classnames/bind';
-import { FaGraduationCap, FaRocket, FaHandshake } from 'react-icons/fa6';
+import {
+    FaGraduationCap,
+    FaRocket,
+    FaHandshake,
+    FaHandPointRight,
+    FaClock,
+    FaCommentDots,
+    FaPeopleGroup,
+    FaClipboardCheck,
+} from 'react-icons/fa6';
 
 import styles from './About.module.scss';
 import AboutItem from './AboutItem';
 import HighlightText from './HighlightText';
+import Button from '@/components/ui/Button';
 
 const cx = classNames.bind(styles);
 
 const About = () => {
     return (
         <section className={cx('wapper')} id="about">
-            <h4 className={cx('hashtag')}># Giới Thiệu</h4>
+            <h1 className={cx('hashtag')}>Giới Thiệu</h1>
             <div className={cx('content')}>
                 <AboutItem title="Học Vấn" className="education" iconLeft={<FaGraduationCap />}>
-                    <p>
-                        Tốt nghiệp chuyên ngành{' '}
-                        <HighlightText>Công nghệ Thông tin / Lập trình Web</HighlightText> tại
-                        trường Cao Đẳng Kỹ Thuật Cao Thắng, được trang bị vững chắc về {''}
-                        <HighlightText>
-                            nguyên lý lập trình, cơ sở dữ liệu, và phát triển ứng dụng web hiện đại.
-                        </HighlightText>
-                    </p>
+                    <div>
+                        <p>CAO ĐẲNG KỸ THUẬT CAO THẮNG</p>
+                        <span>
+                            Tốt nghiệp chuyên ngành Công nghệ Thông tin / Lập trình Web (2022 -
+                            2025)
+                        </span>
+                        <p>
+                            Trang bị vững chắc về nguyên lý lập trình, cơ sở dữ liệu, và phát triển
+                            ứng dụng web hiện đại.
+                        </p>
+                    </div>
                 </AboutItem>
 
                 <AboutItem title="Kinh Nghiệm" className="experience" iconLeft={<FaRocket />}>
-                    <p>
-                        Trong quá trình học tập, tôi đã tham gia nhiều{' '}
-                        <HighlightText>dự án nhóm và cá nhân</HighlightText>, đặc biệt là{' '}
-                        <HighlightText>đồ án tốt nghiệp</HighlightText> với vai trò lập trình viên.
-                        Những dự án này giúp tôi:
-                    </p>
+                    <div className={cx('experience-left')}>
+                        <p>
+                            Trong quá trình học tập, tôi đã tham gia nhiều{' '}
+                            <HighlightText>dự án nhóm và cá nhân</HighlightText>, đặc biệt là{' '}
+                            <HighlightText>đồ án tốt nghiệp</HighlightText> với vai trò lập trình
+                            viên. Những dự án này giúp tôi:
+                        </p>
 
-                    <ul>
-                        <li>
-                            Thành thạo <HighlightText>ReactJS</HighlightText>, làm việc được với
-                            <HighlightText>TypeScript, HTML5, CSS3, SCSS</HighlightText> và làm việc
-                            với <HighlightText>RESTful API (Laravel, MySQL)</HighlightText>.
-                        </li>
-                        <li>
-                            Hiểu rõ quy trình phát triển phần mềm: từ phân tích yêu cầu, thiết kế,
-                            lập trình, đến kiểm thử và triển khai.
-                        </li>
-                        <li>
-                            Tích lũy kinh nghiệm giải quyết vấn đề thực tế, tối ưu giao diện và hiệu
-                            năng ứng dụng.
-                        </li>
-                    </ul>
+                        <ul>
+                            <li>
+                                <FaHandPointRight />
+                                {'  '} Thành thạo
+                                <HighlightText>ReactJS, HTML5, CSS3, SCSS</HighlightText>, làm việc
+                                được với
+                                <HighlightText> TypeScript</HighlightText> và{' '}
+                                <HighlightText>RESTful API (Laravel, MySQL)</HighlightText>.
+                            </li>
+                            <li>
+                                {' '}
+                                <FaHandPointRight />
+                                {'  '}
+                                Hiểu rõ quy trình phát triển phần mềm: từ phân tích yêu cầu, thiết
+                                kế, lập trình, đến kiểm thử và triển khai.
+                            </li>
+                            <li>
+                                {' '}
+                                <FaHandPointRight />
+                                {'  '}
+                                Tích lũy kinh nghiệm giải quyết vấn đề thực tế, tối ưu giao diện và
+                                hiệu năng ứng dụng.
+                            </li>
+                        </ul>
+                    </div>
+                    <div className={cx('experience-right')}>
+                        <div className={cx('experience-right-item')}>
+                            <div>
+                                <span>5+</span>
+                                <p>Dự án cá nhân</p>
+                            </div>
+                        </div>
+                        <div className={cx('experience-right-item')}>
+                            <div>
+                                <span>3+</span>
+                                <p>Dự án nhóm</p>
+                            </div>
+                        </div>
+                    </div>
                 </AboutItem>
 
                 <AboutItem
@@ -53,7 +91,7 @@ const About = () => {
                     className="responsibility"
                     iconLeft={<FaHandshake />}
                 >
-                    <p>
+                    {/*  <p>
                         Tôi luôn hướng đến sự{' '}
                         <HighlightText>chuyên nghiệp, tinh thần trách nhiệm cao</HighlightText> và
                         khả năng <HighlightText>tự học, thích ứng nhanh</HighlightText> với công
@@ -61,6 +99,19 @@ const About = () => {
                         <HighlightText>làm việc nhóm, giao tiếp và quản lý thời gian</HighlightText>
                         , đảm bảo tiến độ và chất lượng sản phẩm.
                     </p>
+ */}
+                    <Button outline iconLeft={<FaPeopleGroup />}>
+                        Làm việc nhóm
+                    </Button>
+                    <Button outline iconLeft={<FaCommentDots />}>
+                        Giao tiếp
+                    </Button>
+                    <Button outline iconLeft={<FaClock />}>
+                        Quản lý thời gian
+                    </Button>
+                    <Button outline iconLeft={<FaClipboardCheck />}>
+                        Trách nhiệm
+                    </Button>
                 </AboutItem>
             </div>
         </section>

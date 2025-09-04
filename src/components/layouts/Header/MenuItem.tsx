@@ -1,11 +1,10 @@
-import { memo } from 'react';
 import { Link } from 'react-scroll';
 
 interface Props {
     active: string;
     setActive: React.Dispatch<React.SetStateAction<string>>;
 }
-const MenuItem = memo(({ active, setActive }: Props) => {
+const MenuItem = ({ active, setActive }: Props) => {
     const navbar = [
         {
             id: 1,
@@ -38,7 +37,7 @@ const MenuItem = memo(({ active, setActive }: Props) => {
                         smooth={true}
                         duration={500}
                         spy={true}
-                        offset={-50}
+                        offset={-1}
                         activeClass="active-nav"
                         className={active === item.to ? 'active-nav' : ''}
                         onSetActive={() => setActive(item.to)}
@@ -49,6 +48,6 @@ const MenuItem = memo(({ active, setActive }: Props) => {
             ))}
         </>
     );
-});
+};
 
 export default MenuItem;
