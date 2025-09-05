@@ -55,14 +55,12 @@ const About = () => {
                                 <HighlightText>RESTful API (Laravel, MySQL)</HighlightText>.
                             </li>
                             <li>
-                                {' '}
                                 <FaHandPointRight />
                                 {'  '}
                                 Hiểu rõ quy trình phát triển phần mềm: từ phân tích yêu cầu, thiết
                                 kế, lập trình, đến kiểm thử và triển khai.
                             </li>
                             <li>
-                                {' '}
                                 <FaHandPointRight />
                                 {'  '}
                                 Tích lũy kinh nghiệm giải quyết vấn đề thực tế, tối ưu giao diện và
@@ -91,15 +89,6 @@ const About = () => {
                     className="responsibility"
                     iconLeft={<FaHandshake />}
                 >
-                    {/*  <p>
-                        Tôi luôn hướng đến sự{' '}
-                        <HighlightText>chuyên nghiệp, tinh thần trách nhiệm cao</HighlightText> và
-                        khả năng <HighlightText>tự học, thích ứng nhanh</HighlightText> với công
-                        nghệ mới. Bên cạnh đó, tôi có kinh nghiệm{' '}
-                        <HighlightText>làm việc nhóm, giao tiếp và quản lý thời gian</HighlightText>
-                        , đảm bảo tiến độ và chất lượng sản phẩm.
-                    </p>
- */}
                     <Button outline iconLeft={<FaPeopleGroup />}>
                         Làm việc nhóm
                     </Button>
