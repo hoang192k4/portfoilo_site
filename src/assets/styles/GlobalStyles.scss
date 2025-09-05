@@ -63,6 +63,22 @@ body {
         linear-gradient(90deg, var(--bg-gradient-second) 1px, transparent 1px);
     background-size: 80px 80px;
     background-attachment: fixed;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: fixed; // luôn phủ toàn màn hình
+        inset: 0;
+        pointer-events: none;
+
+        background: linear-gradient(
+            to right,
+            var(--background-color) 0%,
+            transparent 20%,
+            transparent 80%,
+            var(--background-color) 100%
+        );
+    }
 }
 
 a {
@@ -109,7 +125,26 @@ ul {
     color: var(--background-color);
     border-radius: 10px;
 }
-
+@media screen and (max-width: 1500px) {
+    body {
+        &:after {
+            background: linear-gradient(
+                to right,
+                var(--background-color) 0%,
+                transparent 5%,
+                transparent 95%,
+                var(--background-color) 100%
+            );
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    body {
+        &:after {
+            content: none;
+        }
+    }
+}
 @media screen and (max-width: 768px) {
     html {
         // tương đương 1 rem = 8px
