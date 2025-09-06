@@ -38,24 +38,24 @@ const Home = () => {
                 <small className={cx('description')}>
                     Hãy xem qua các dự án tôi đã thực hiện hoặc tải CV để biết thêm chi tiết.
                 </small>
-                <div className={cx('socail')}>
+                <div className={cx('social')}>
                     <Button
                         href="https://github.com/hoang192k4"
-                        className={cx('socail-icon')}
+                        className={cx('social-icon')}
                         blank
                     >
                         <FaGithub />
                     </Button>
                     <Button
                         href="https://www.linkedin.com/in/nguyenngochoang2004/en/"
-                        className={cx('socail-icon')}
+                        className={cx('social-icon')}
                         blank
                     >
                         <FaLinkedin />
                     </Button>
                     <Button
                         href="mailto:nguyenngochoang192k4@gamil.com"
-                        className={cx('socail-icon')}
+                        className={cx('social-icon')}
                         blank
                     >
                         <SiGmail />

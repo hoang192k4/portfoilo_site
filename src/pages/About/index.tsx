@@ -20,7 +20,7 @@ const cx = classNames.bind(styles);
 const About = () => {
     return (
         <section className={cx('wapper')} id="about">
-            <h1 className={cx('hashtag')}>Giới Thiệu</h1>
+            <h1 className="hashtag">Giới Thiệu</h1>
             <div className={cx('content')}>
                 <AboutItem title="Học Vấn" className="education" iconLeft={<FaGraduationCap />}>
                     <div>
@@ -68,6 +68,7 @@ const About = () => {
                             </li>
                         </ul>
                     </div>
+
                     <div className={cx('experience-right')}>
                         <div className={cx('experience-right-item')}>
                             <div>
