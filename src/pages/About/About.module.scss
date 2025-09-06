@@ -1,24 +1,30 @@
 @use '@styles/mixins' as *;
 .wapper {
-    padding-top: 6rem;
+    padding-top: var(--padding-top-section);
     color: var(--text-color);
 }
-.hashtag {
-    text-align: center;
-}
+
 .content {
     padding: 2rem 0;
 }
+
 .title {
     display: flex;
     align-items: center;
-    padding: 2rem 0 1rem 0;
+    padding: 1.8rem 0;
 
     font-size: 2.8rem;
 
     svg {
         margin-right: 0.5rem;
     }
+}
+
+.content-box {
+    padding: 2rem 0;
+}
+.content-box:first-child {
+    border-bottom: 3px solid var(--bg-primary-button);
 }
 
 .content-item {
@@ -99,7 +105,7 @@
 
 .responsibility {
     @include flex;
-    gap: 1rem;
+    gap: 1.6rem;
 
     button {
         width: 24%;
@@ -121,6 +127,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .content-box:nth-child(2) {
+        border-bottom: 3px solid var(--bg-primary-button);
+    }
     .experience-left {
         width: 100% !important;
     }

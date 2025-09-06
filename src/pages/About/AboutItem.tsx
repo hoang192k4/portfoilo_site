@@ -12,13 +12,13 @@ interface Props {
 }
 const AboutItem = ({ title, children, className, iconLeft }: Props) => {
     return (
-        <>
+        <div className={cx('content-box')}>
             <h2 className={cx('title')}>
                 {iconLeft && iconLeft}
                 {title}
             </h2>
             <div className={cx('content-item', className)}>{children}</div>
-        </>
+        </div>
     );
 };
 
