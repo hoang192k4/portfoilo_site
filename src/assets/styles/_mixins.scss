@@ -22,3 +22,8 @@
     @include flex;
     justify-content: flex-start;
 }
+
+@mixin wapper {
+    padding-top: var(--padding-top-section);
+    color: var(--text-color);
+}

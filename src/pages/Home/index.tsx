@@ -23,7 +23,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div className={cx('cta')}>
-                    <Button href="#hero" primary>
+                    <Button href="#project" primary>
                         Xem Dự Án
                     </Button>
                     <Button

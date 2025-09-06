@@ -1,0 +1,96 @@
+@use '@styles/mixins' as *;
+.wapper {
+    @include wapper;
+}
+
+.project-items {
+    @include flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    padding-top: 6rem;
+}
+
+.project-item {
+    width: calc(100% / 3 - 1.4rem);
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s linear;
+
+    img {
+        width: 100%;
+    }
+
+    &:hover {
+        background-color: var(--card-bg-hover);
+        box-shadow: var(--card-shadow-hover);
+        cursor: pointer;
+    }
+}
+
+.cta {
+    @include flexBetween;
+    padding: 1rem 0;
+
+    > div {
+        width: 100%;
+        padding-right: 1rem;
+    }
+    .visit {
+        width: 8rem;
+        font-size: 1.4rem;
+    }
+}
+
+.short-description {
+    @include flexBetween;
+
+    .time {
+        font-size: 1.2rem;
+        font-style: italic;
+        margin-left: 4rem;
+    }
+}
+
+.description {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+
+.tech {
+    @include flex;
+    padding: 1rem 0;
+
+    &-item {
+        font-size: 1.2rem;
+        width: 5.5rem;
+        height: 3rem;
+
+        ~ .tech-item {
+            margin-left: 0.8rem;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+@media screen and (max-width: 1200px) {
+    .project-item {
+        width: calc(50% - 1.4rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-item {
+        width: calc(100% - 1.4rem);
+    }
+}
