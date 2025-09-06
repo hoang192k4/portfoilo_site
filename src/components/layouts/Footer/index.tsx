@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import { FaCopyright } from 'react-icons/fa6';
 
 import styles from './Footer.module.scss';
+import Container from '../Container';
 
 const cx = classNames.bind(styles);
 
@@ -25,19 +26,21 @@ const profile = [
 const Footer = () => {
     console.log('re render footer');
     return (
-        <footer className={cx('wapper')}>
-            <div className={cx('profile')}>
-                {profile?.map((item) => (
-                    <div key={item.id} className={cx('profile-item')}>
-                        <h2>{item.title}</h2>
-                        <p>{item.content}</p>
-                    </div>
-                ))}
-            </div>
-            <p className={cx('subtitle')}>
-                <FaCopyright /> 2025 - Thiết kế và xây dựng <span>Nguyễn Ngọc Hoàng.</span>
-            </p>
-        </footer>
+        <Container>
+            <footer className={cx('wapper')}>
+                <div className={cx('profile')}>
+                    {profile?.map((item) => (
+                        <div key={item.id} className={cx('profile-item')}>
+                            <h2>{item.title}</h2>
+                            <p>{item.content}</p>
+                        </div>
+                    ))}
+                </div>
+                <p className={cx('subtitle')}>
+                    <FaCopyright /> 2025 - Thiết kế và xây dựng <span>Nguyễn Ngọc Hoàng.</span>
+                </p>
+            </footer>
+        </Container>
     );
 };
 

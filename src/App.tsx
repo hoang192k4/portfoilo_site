@@ -4,19 +4,23 @@ import Home from '@/pages/Home';
 import About from '@/pages/About';
 import Container from './components/layouts/Container';
 import Contact from './pages/Contact';
+import Project from './pages/Project';
 
 function App() {
     return (
         <>
             <Header />
-            <Container>
-                <main style={{ minHeight: '1600px' }}>
+
+            <main>
+                <Container>
                     <Home />
+                    <Project />
                     <About />
                     <Contact />
-                </main>
-                <Footer />
-            </Container>
+                </Container>
+            </main>
+
+            <Footer />
         </>
     );
 }

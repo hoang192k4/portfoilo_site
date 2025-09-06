@@ -12,6 +12,10 @@
     --bg-gradient-frist: rgba(51, 50, 50, 0.05);
     --bg-gradient-second: rgba(44, 42, 42, 0.05);
     --padding-top-section: 6rem;
+    --card-bg: #1e1e1e;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    --card-bg-hover: #2a2a2a;
+    --card-shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.75);
 }
 
 html {
@@ -104,6 +108,10 @@ ul {
     --hover-outline-button: rgba(59, 130, 246, 0.1);
     --bg-gradient-frist: rgba(255, 255, 255, 0.05);
     --bg-gradient-second: rgba(255, 255, 255, 0.05);
+    --card-bg: #1e1e1e;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    --card-bg-hover: #2a2a2a;
+    --card-shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.75);
 }
 
 .light {
@@ -115,6 +123,10 @@ ul {
     --hover-outline-button: #eff6ff;
     --bg-gradient-frist: rgba(51, 50, 50, 0.05);
     --bg-gradient-second: rgba(44, 42, 42, 0.05);
+    --card-bg: #fff3e6;
+    --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    --card-bg-hover: #f9fafb;
+    --card-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .container {

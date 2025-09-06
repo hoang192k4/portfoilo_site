@@ -21,6 +21,7 @@ const Contact = () => {
         register,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm<Contact>();
 
     const handleContact = (data: Contact) => {
@@ -31,12 +32,13 @@ const Contact = () => {
                 Chúng tôi đã nhận được phản hồi của bạn.
             </div>,
         );
+        reset();
     };
 
     return (
         <>
             <section className={cx('wapper')} id="contact">
-                <h1 className="hashtag">Contact</h1>
+                <h1 className="hashtag">Liên Hệ</h1>
 
                 <div className={cx('title')}>
                     <p>Tôi luôn tìm kiếm những cơ hội và sự hợp tác mới.</p>

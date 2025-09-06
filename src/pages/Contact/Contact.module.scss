@@ -1,12 +1,12 @@
 @use '@styles/mixins' as *;
+
 .wapper {
-    padding-top: var(--padding-top-section);
+    @include wapper;
     padding-bottom: 15rem;
-    color: var(--text-color);
 }
 
 .title {
-    padding: 3rem 0;
+    padding: 6rem 0 3rem 0;
     p {
         font-size: 2rem;
     }
