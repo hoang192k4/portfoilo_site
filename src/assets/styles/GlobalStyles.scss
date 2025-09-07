@@ -80,8 +80,8 @@ body {
         background: linear-gradient(
             to right,
             var(--background-color) 0%,
-            transparent 20%,
-            transparent 80%,
+            transparent 16%,
+            transparent 84%,
             var(--background-color) 100%
         );
     }
@@ -160,6 +160,20 @@ ul {
     font-size: 1.4rem;
     color: red;
     padding-top: 1rem;
+}
+
+@media screen and (max-width: 1536px) {
+    body {
+        &:after {
+            background: linear-gradient(
+                to right,
+                var(--background-color) 0%,
+                transparent 2%,
+                transparent 98%,
+                var(--background-color) 100%
+            );
+        }
+    }
 }
 
 @media screen and (max-width: 1400px) {
