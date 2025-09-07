@@ -3,40 +3,60 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import styles from './Project.module.scss';
 import ProjectItem from './ProjectItem';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import projectsData from '../../data/projects.json';
+import type { ProjectType } from '@/types/Project';
 
 const cx = classNames.bind(styles);
 
 const Project = () => {
-    const [selectedProject, setSelectedProject] = useState('');
+    const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
+    const [projects, setProjects] = useState<ProjectType[]>([]);
+
+    //fake call api
+    useEffect(() => {
+        if (projectsData) setProjects(projectsData);
+    }, []);
+
+    console.log('data >>>', projects);
+
+    console.log('rerender projects');
 
     return (
         <section className={cx('wapper')} id="project">
             <h1 className="hashtag">Dự Án</h1>
 
-            {/*  <div className={cx('title')}>
-                <h2>Hãy xem các dự án cá nhân của tôi </h2>
-            </div> */}
-
             <div className={cx('project-items')}>
-                <ProjectItem setSelectedProject={setSelectedProject} />
-                <ProjectItem setSelectedProject={setSelectedProject} />
-                <ProjectItem setSelectedProject={setSelectedProject} />
-                <ProjectItem setSelectedProject={setSelectedProject} />
-                <ProjectItem setSelectedProject={setSelectedProject} />
-                <ProjectItem setSelectedProject={setSelectedProject} />
+                {projects &&
+                    projects.map((propject) => (
+                        <ProjectItem
+                            key={propject.id}
+                            setSelectedProject={setSelectedProject}
+                            project={propject}
+                        />
+                    ))}
             </div>
 
             <AnimatePresence>
                 {selectedProject && (
                     <motion.div
                         className={cx('overlay')}
-                        onClick={() => setSelectedProject('')}
+                        onClick={() => setSelectedProject(null)}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                     >
-                        <ProjectItem setSelectedProject={setSelectedProject} openModal={true} />
+                        <motion.div
+                            layoutId={`project-${selectedProject.id}`}
+                            className={cx('project-detail')}
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <ProjectItem
+                                setSelectedProject={setSelectedProject}
+                                openModal={true}
+                                project={selectedProject}
+                            />
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -1,18 +1,27 @@
 import classNames from 'classnames/bind';
+import { motion } from 'framer-motion';
 
 import styles from './Project.module.scss';
 import Button from '@components/ui/Button';
+import type { ProjectType } from '@/types/Project';
 
 const cx = classNames.bind(styles);
 
 interface Props {
-    setSelectedProject: React.Dispatch<React.SetStateAction<string>>;
+    setSelectedProject: React.Dispatch<React.SetStateAction<ProjectType | null>>;
     openModal?: boolean;
+    project: ProjectType;
 }
+
 const ProjectItem = (props: Props) => {
-    const { openModal, setSelectedProject } = props;
+    const { openModal, setSelectedProject, project } = props;
+
     return (
-        <div className={cx('project-item')} onClick={() => setSelectedProject('a')}>
+        <motion.div
+            layoutId={`project-${project?.id}`}
+            className={cx('project-item', { open: openModal })}
+            onClick={() => !openModal && setSelectedProject(project)}
+        >
             <img
                 src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
                 alt="internet không ổn định"
@@ -20,14 +29,17 @@ const ProjectItem = (props: Props) => {
 
             <div className={cx('cta')}>
                 <div>
-                    <h4 className={cx('name')}>Sinh viên nghiêm túc</h4>
+                    <h4 className={cx('name')}>{project?.name}</h4>
                     <div className={cx('short-description')}>
-                        <p>Dự án cá nhân</p>
-                        <span className={cx('time')}>09/2022 - 11/2022</span>
+                        <p>{project?.type_project}</p>
+                        <span className={cx('time')}>
+                            {project?.time_start} - {project?.time_end}
+                        </span>
                     </div>
                 </div>
+
                 {openModal && (
-                    <Button primary className={cx('visit')} href="https://hiennguyenvan.com/" blank>
+                    <Button primary className={cx('visit')} href={project?.link} blank>
                         Github
                     </Button>
                 )}
@@ -35,28 +47,19 @@ const ProjectItem = (props: Props) => {
 
             {openModal && (
                 <>
-                    <p className={cx('description')}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ad voluptatum
-                        dolores odit ipsa, esse, quis cum.
-                    </p>
+                    <p className={cx('description')}>{project?.description}</p>
 
                     <div className={cx('tech')}>
-                        <Button className={cx('tech-item')} outline>
-                            ReactJs
-                        </Button>
-                        <Button className={cx('tech-item')} outline>
-                            Html
-                        </Button>
-                        <Button className={cx('tech-item')} outline>
-                            CSS
-                        </Button>
-                        <Button className={cx('tech-item')} outline>
-                            Laravel
-                        </Button>
+                        {project?.tech &&
+                            project?.tech?.map((tech) => (
+                                <Button key={tech.id} className={cx('tech-item')} outline>
+                                    {tech.name}
+                                </Button>
+                            ))}
                     </div>
                 </>
             )}
-        </div>
+        </motion.div>
     );
 };
 
