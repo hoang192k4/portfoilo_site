@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "",
+        "image": "he-thong-ho-tro-giang-vien-quan-ly-hoc-tap-sinh-vien.png",
         "name": "Hệ thống hỗ trợ giảng viên quản lý học tập sinh viên",
         "description": "Hệ thống giúp giảng viên tiết kiệm thời gian trong các công việc quản lý học tập truyền thống, theo dõi tiến độ sinh viên, gửi thông báo và chia sẻ tài liệu trực tiếp trên nền tảng mà không cần ứng dụng khác.",
         "time_end": "08/2025",
@@ -33,7 +33,7 @@
     },
     {
         "id": 2,
-        "image": "",
+        "image": "thuong-mai-dien-tu.png",
         "name": "Thương mại diện tử",
         "description": "Website thương mại điện tử chuyên cung cấp các sản phẩm công nghệ, tập trung vào laptop và điện thoại. Hệ thống giúp người dùng dễ dàng tìm kiếm, so sánh và mua sắm các thiết bị công nghệ giá trị cao một cách an toàn, tiện lợi mà không cần đến cửa hàng trực tiếp. Khách hàng có thể đặt mua ở bất kỳ đâu, bất kỳ lúc nào với trải nghiệm nhanh chóng và hiện đại.",
         "time_end": "02/2025",
@@ -61,7 +61,7 @@
     },
     {
         "id": 3,
-        "image": "",
+        "image": "bao-online.png",
         "name": "Website báo online",
         "description": "Website báo online cho phép người dùng đọc tin tức, tìm kiếm bài viết theo danh mục hoặc từ khóa. Hệ thống có trang quản trị cho phép admin thêm mới, chỉnh sửa và quản lý danh sách bài báo. Đây là phiên bản cơ bản của một hệ thống báo điện tử.",
         "time_end": "20/10/24",
@@ -89,7 +89,7 @@
     },
     {
         "id": 4,
-        "image": "",
+        "image": "portfolio-site.png",
         "name": "Website Portfolio",
         "description": "Website cá nhân (Portfolio Site) được xây dựng nhằm giới thiệu bản thân, kỹ năng và các dự án đã thực hiện. Người dùng có thể xem thông tin về tôi, danh sách dự án đã thực hiện. Giao diện được thiết kế hiện đại, tối ưu trải nghiệm trên nhiều thiết bị.",
         "time_end": "10/09/25",
@@ -121,7 +121,7 @@
     },
     {
         "id": 5,
-        "image": "",
+        "image": "clone-the-gioi-di-dong.png",
         "name": "Website tĩnh clone thế giới di động",
         "description": "Website tĩnh clone từ giao diện Thế Giới Di Động, được xây dựng nhằm thực hành HTML, CSS và JavaScript. Website mô phỏng các trang chính như trang chủ, danh mục sản phẩm và chi tiết sản phẩm. Dự án tập trung vào giao diện người dùng, bố cục, responsive, chưa có chức năng xử lý dữ liệu.",
         "time_end": "08/2023",
@@ -145,7 +145,7 @@
     },
     {
         "id": 6,
-        "image": "",
+        "image": "may-tao-loi-khuyen.png",
         "name": "Máy tạo lời khuyên (Advice Generator)",
         "description": "Website máy tạo lời khuyên là ứng dụng React cơ bản cho phép người dùng nhận lời khuyên ngẫu nhiên, thêm vào danh sách yêu thích và xóa khi không cần. Ứng dụng có giao diện đơn giản, trực quan, phù hợp để luyện tập quản lý state và thao tác CRUD trong React.",
         "time_end": "06/10/24",

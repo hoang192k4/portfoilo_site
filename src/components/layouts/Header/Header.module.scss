@@ -43,9 +43,11 @@
         }
     }
 }
+
 .menu-mobile-close {
     animation: transfromClose 0.3s forwards;
 }
+
 @keyframes transfrom {
     0% {
         transform: translateX(-100%);
@@ -54,6 +56,7 @@
         transform: translateX(0);
     }
 }
+
 @keyframes transfromClose {
     0% {
         transform: translateX(0);
@@ -76,8 +79,7 @@
     transform: translateX(-50%);
     z-index: 9;
     color: var(--text-color);
-
-    background-color: rgba(255, 255, 255, 0.1); /* Light theme: trắng mờ */
+    background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px); /* Làm mờ nền phía sau */
     -webkit-backdrop-filter: blur(10px); /* Hỗ trợ Safari */
 }
@@ -116,7 +118,6 @@
 
 .navbar-right {
     @include flexBetween;
-
     cursor: pointer;
     padding: 1rem;
     transition: all 0.3s linear;
@@ -128,7 +129,7 @@
     }
 }
 
-@media screen and (max-width: 1219px) {
+@media screen and (max-width: 1200px) {
     .navbar {
         width: 98%;
     }

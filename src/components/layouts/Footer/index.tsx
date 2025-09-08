@@ -23,8 +23,8 @@ const profile = [
         content: 'nguyenngochoang192k4@gmail.com',
     },
 ];
+
 const Footer = () => {
-    console.log('re render footer');
     return (
         <Container>
             <footer className={cx('wapper')}>

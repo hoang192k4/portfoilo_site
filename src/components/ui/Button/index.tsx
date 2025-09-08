@@ -17,6 +17,7 @@ interface Props {
     blank?: boolean;
     onClick?: () => void;
 }
+
 const Button = (propsCurrent: Props) => {
     const {
         children,

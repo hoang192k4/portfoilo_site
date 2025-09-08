@@ -10,6 +10,7 @@ interface Props {
     className: string;
     iconLeft?: React.ReactNode;
 }
+
 const AboutItem = ({ title, children, className, iconLeft }: Props) => {
     return (
         <div className={cx('content-box')}>

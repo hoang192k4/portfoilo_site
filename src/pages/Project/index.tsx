@@ -18,10 +18,6 @@ const Project = () => {
         if (projectsData) setProjects(projectsData);
     }, []);
 
-    console.log('data >>>', projects);
-
-    console.log('rerender projects');
-
     return (
         <section className={cx('wapper')} id="project">
             <h1 className="hashtag">Dự Án</h1>
@@ -47,6 +43,7 @@ const Project = () => {
                         exit={{ opacity: 0 }}
                     >
                         <motion.div
+                            key={selectedProject.id}
                             layoutId={`project-${selectedProject.id}`}
                             className={cx('project-detail')}
                             onClick={(e) => e.stopPropagation()}

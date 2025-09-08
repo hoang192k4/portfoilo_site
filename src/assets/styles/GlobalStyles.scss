@@ -35,7 +35,7 @@ html {
 
 /* Scrollbar mảnh */
 ::-webkit-scrollbar {
-    width: 10px; /* mảnh hơn (chiều rộng dọc) */
+    width: 10px;
 }
 
 /* Track */
@@ -73,7 +73,7 @@ body {
 
     &:after {
         content: '';
-        position: fixed; // luôn phủ toàn màn hình
+        position: fixed;
         inset: 0;
         pointer-events: none;
 
@@ -162,6 +162,7 @@ ul {
     padding-top: 1rem;
 }
 
+//responsive cho laptop fix linear-gradient che element
 @media screen and (max-width: 1536px) {
     body {
         &:after {
