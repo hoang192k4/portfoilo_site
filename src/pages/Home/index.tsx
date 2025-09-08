@@ -7,6 +7,24 @@ import Button from '@components/ui/Button';
 
 const cx = classNames.bind(styles);
 
+const socials = [
+    {
+        id: 1,
+        href: 'https://github.com/hoang192k4',
+        icon: <FaGithub />,
+    },
+    {
+        id: 2,
+        href: 'https://www.linkedin.com/in/nguyenngochoang2004/en/',
+        icon: <FaLinkedin />,
+    },
+    {
+        id: 3,
+        href: 'mailto:nguyenngochoang192k4@gamil.com',
+        icon: <SiGmail />,
+    },
+];
+
 const Home = () => {
     return (
         <section className={cx('wapper')} id="hero">
@@ -38,28 +56,19 @@ const Home = () => {
                 <small className={cx('description')}>
                     Hãy xem qua các dự án tôi đã thực hiện hoặc tải CV để biết thêm chi tiết.
                 </small>
+
                 <div className={cx('social')}>
-                    <Button
-                        href="https://github.com/hoang192k4"
-                        className={cx('social-icon')}
-                        blank
-                    >
-                        <FaGithub />
-                    </Button>
-                    <Button
-                        href="https://www.linkedin.com/in/nguyenngochoang2004/en/"
-                        className={cx('social-icon')}
-                        blank
-                    >
-                        <FaLinkedin />
-                    </Button>
-                    <Button
-                        href="mailto:nguyenngochoang192k4@gamil.com"
-                        className={cx('social-icon')}
-                        blank
-                    >
-                        <SiGmail />
-                    </Button>
+                    {socials &&
+                        socials?.map((item) => (
+                            <Button
+                                key={item.id}
+                                href={item.href}
+                                className={cx('social-icon')}
+                                blank
+                            >
+                                {item.icon}
+                            </Button>
+                        ))}
                 </div>
             </div>
         </section>

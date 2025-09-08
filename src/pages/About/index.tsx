@@ -17,6 +17,29 @@ import Button from '@/components/ui/Button';
 
 const cx = classNames.bind(styles);
 
+const responsibilitys = [
+    {
+        id: 1,
+        icon: <FaPeopleGroup />,
+        text: 'Làm việc nhóm',
+    },
+    {
+        id: 2,
+        icon: <FaCommentDots />,
+        text: 'Giao tiếp',
+    },
+    {
+        id: 3,
+        icon: <FaClock />,
+        text: 'Quản lý thời gian',
+    },
+    {
+        id: 4,
+        icon: <FaClipboardCheck />,
+        text: 'Trách nhiệm',
+    },
+];
+
 const About = () => {
     return (
         <section className={cx('wapper')} id="about">
@@ -90,18 +113,12 @@ const About = () => {
                     className="responsibility"
                     iconLeft={<FaHandshake />}
                 >
-                    <Button outline iconLeft={<FaPeopleGroup />}>
-                        Làm việc nhóm
-                    </Button>
-                    <Button outline iconLeft={<FaCommentDots />}>
-                        Giao tiếp
-                    </Button>
-                    <Button outline iconLeft={<FaClock />}>
-                        Quản lý thời gian
-                    </Button>
-                    <Button outline iconLeft={<FaClipboardCheck />}>
-                        Trách nhiệm
-                    </Button>
+                    {responsibilitys &&
+                        responsibilitys?.map((item) => (
+                            <Button key={item.id} outline iconLeft={item.icon}>
+                                {item.text}
+                            </Button>
+                        ))}
                 </AboutItem>
             </div>
         </section>

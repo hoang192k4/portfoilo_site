@@ -30,14 +30,14 @@ const Header = () => {
         }
     };
 
-    console.log('re render header');
-
+    //handle scroll ressponsive screen mobile
     useEffect(() => {
         activeMenuMobile
             ? document.body.classList.add('no-scroll')
             : document.body.classList.remove('no-scroll');
     }, [activeMenuMobile]);
 
+    //handle theme save localStorage
     const handleToggleTheme = () => {
         setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
     };
@@ -50,9 +50,11 @@ const Header = () => {
 
     return (
         <header>
+            {/* Menu mobile */}
             {activeMenuMobile && (
                 <>
                     <div className={cx(['navbar-overlay'])} onClick={hanleToggle}></div>
+
                     <ul
                         className={cx([
                             'navbar-mobile',
@@ -65,12 +67,14 @@ const Header = () => {
             )}
 
             <nav className={cx('navbar')}>
+                {/* icon open menu mobile */}
                 <MediaQuery maxWidth={768}>
                     <span className={cx('navbar-icon')} onClick={hanleToggle}>
                         <FaBars size={18} />
                     </span>
                 </MediaQuery>
 
+                {/* menu table & desktop */}
                 <MediaQuery minWidth={768}>
                     <ul className={cx('navbar-left')}>
                         <MenuItem active={active} setActive={setActive} />

@@ -24,6 +24,7 @@ const Contact = () => {
         reset,
     } = useForm<Contact>();
 
+    //fake call api tương tác client
     const handleContact = (data: Contact) => {
         toast.success(
             <div>
@@ -58,6 +59,7 @@ const Contact = () => {
                             />
                             {errors.name && <ErrorMessage subTitle={errors.name.message} />}
                         </div>
+
                         <div className={cx('form-group', errors.email ? 'form-group-error' : '')}>
                             <label htmlFor="name" className={cx('form-label')}>
                                 Email<span>*</span>
@@ -103,7 +105,7 @@ const Contact = () => {
                         bạn sẽ được bảo mật tuyệt đối.
                     </p>
                 </div>
-
+                {/* dùng để hển thị được toast */}
                 <ToastContainer />
             </section>
         </>
