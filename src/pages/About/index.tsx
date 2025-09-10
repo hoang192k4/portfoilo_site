@@ -9,6 +9,7 @@ import {
     FaPeopleGroup,
     FaClipboardCheck,
 } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
 
 import styles from './About.module.scss';
 import AboutItem from './AboutItem';
@@ -92,7 +93,13 @@ const About = () => {
                         </ul>
                     </div>
 
-                    <div className={cx('experience-right')}>
+                    <motion.div
+                        className={cx('experience-right')}
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, ease: 'easeOut' }}
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
                         <div className={cx('experience-right-item')}>
                             <div>
                                 <span>5+</span>
@@ -105,7 +112,7 @@ const About = () => {
                                 <p>Dự án nhóm</p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </AboutItem>
 
                 <AboutItem

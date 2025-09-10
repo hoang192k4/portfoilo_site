@@ -22,6 +22,10 @@ const ProjectItem = (props: Props) => {
             layoutId={`project-${project?.id}`}
             className={cx('project-item', { open: openModal })}
             onClick={() => !openModal && setSelectedProject(project)}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
         >
             <ProjectContent project={project} openModal={openModal} />
         </motion.div>
