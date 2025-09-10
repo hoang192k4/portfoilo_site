@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa6';
 import { SiGmail } from 'react-icons/si';
+import { motion } from 'framer-motion';
 
 import styles from './Home.module.scss';
 import Button from '@components/ui/Button';
@@ -28,7 +29,12 @@ const socials = [
 const Home = () => {
     return (
         <section className={cx('wapper')} id="hero">
-            <div>
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
                 <div className={cx('content')}>
                     <h1>
                         Xin chào, Tôi là <span>Nguyễn Ngọc Hoàng</span>
@@ -70,7 +76,7 @@ const Home = () => {
                             </Button>
                         ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };
