@@ -51,7 +51,7 @@ const Home = () => {
                         Xem Dự Án
                     </Button>
                     <Button
-                        href="/CV_Hoang_Frontend.pdf"
+                        href="/Resume_NguyenNgocHoang_ENG.pdf"
                         outline
                         download={true}
                         iconLeft={<FaDownload />}
